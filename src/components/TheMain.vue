@@ -11,13 +11,18 @@
         </div>
 
         <!-- Container Icons -->
+        <ContainerIcon></ContainerIcon>
 
     </main>
 </template>
   
   
 <script>
+
+import ContainerIcon from './ContainerIcon.vue';
+
 export default {
+    components: {ContainerIcon},
 
     data() {
         return {
