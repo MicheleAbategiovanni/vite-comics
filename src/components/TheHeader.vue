@@ -16,6 +16,13 @@
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="navbar-collapse collapse show " id="navbarSupportedContent" style="">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-none" v-for="(navItem) in items">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">{{ navItem.title }}</a>
+            </li>
+          </ul>
+        </div>
 
         <div class="d-none d-lg-flex">
 
