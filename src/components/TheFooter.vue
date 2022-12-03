@@ -2,14 +2,15 @@
 
   <footer>
 
+    <!-- Nav Footer -->
     <div class="jumbotron-footer">
 
       <div class="p-3 container">
-        <div class="row text-white">
+        <div class="row row-cols-3 text-white">
 
-          <div class="col-lg-4">
+          <div class="col">
 
-            <div class="row">
+            <div class="row row-cols-3">
 
               <div class="col" v-for="listFooter in navMap">
 
@@ -24,9 +25,6 @@
 
               </div>
 
-              <div class="col">DC</div>
-              <div class="col">SITES</div>
-              <div class="col">SHOP</div>
             </div>
 
           </div>
@@ -38,23 +36,30 @@
 
     </div>
 
-    <div class="bg-secondary">
+    <!-- Social Nav -->
+    <div class="bg-footer">
+
       <div class="container d-flex justify-content-between py-4">
 
+        <!-- Container Button -->
         <div>
-          <button>SIGN-UP NOW!</button>
+          <button type="button" class="border-blue text-white p-3 ">SIGN-UP NOW!</button>
         </div>
 
+        <!-- Container Icon Social -->
         <div>
 
-          <ul class="nav justify-content-center">
+          <ul class="nav align-items-center">
 
             <li class="nav-item">
-              <h4>FOLLOW US</h4>
+              <a class="nav-link px-2 fw-bold fs-5" href="#">FOLLOW US
+              </a>
             </li>
 
             <li class="text-white" v-for="iconList in icon">
+              <a class="nav-link px-2" href="#">
                 <img :src=iconList.src :alt=iconList.alt class="text-dark">
+              </a>
             </li>
 
           </ul>
@@ -84,27 +89,51 @@ export default {
             }
           ],
         },
+        {
+          title: "DC",
+          listSubtitle: [
+            {
+              list: ['1', '2'],
+            }
+          ],
+        },
+        {
+          title: "SITES",
+          listSubtitle: [
+            {
+              list: ['1', '2'],
+            }
+          ],
+        },
+        {
+          title: "SHOP",
+          listSubtitle: [
+            {
+              list: ['1', '2'],
+            }
+          ],
+        },
       ],
       icon: [
         {
-          src:"/img/footer-facebook.png",
-          alt:"logo facebook"
+          src: "/img/footer-facebook.png",
+          alt: "logo facebook"
         },
         {
-          src:"/img/footer-twitter.png",
-          alt:"logo twitter"
+          src: "/img/footer-twitter.png",
+          alt: "logo twitter"
         },
         {
-          src:"/img/footer-youtube.png",
-          alt:"logo youtube"
+          src: "/img/footer-youtube.png",
+          alt: "logo youtube"
         },
         {
-          src:"/img/footer-pinterest.png",
-          alt:"logo pinterest"
+          src: "/img/footer-pinterest.png",
+          alt: "logo pinterest"
         },
         {
-          src:"/img/footer-periscope.png",
-          alt:"logo periscope"
+          src: "/img/footer-periscope.png",
+          alt: "logo periscope"
         },
       ]
     }
@@ -117,8 +146,18 @@ export default {
   
 <style lang="scss">
 .jumbotron-footer {
-  background-image: url("/public/img/footer-bg.jpg");
+  background-image: url("/img/footer-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.bg-footer {
+  background-color: #303030;
+}
+
+.border-blue {
+  border: 3px solid #0282F9;
+  background-color: transparent;
+  font-weight: bold;
 }
 </style>
