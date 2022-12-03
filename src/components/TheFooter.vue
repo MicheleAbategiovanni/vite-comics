@@ -129,7 +129,7 @@ export default {
   
   
   
-<style lang="scss">
+<style lang="scss" scoped>
 .jumbotron-footer {
   background-image: url("/img/footer-bg.jpg");
   background-repeat: no-repeat;
