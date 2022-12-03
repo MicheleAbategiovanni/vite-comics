@@ -84,13 +84,12 @@ export default {
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 li {
 
 
   &:hover {
-    .border-navbar{
-
+    .border-navbar {
       opacity: 1;
     }
 
@@ -101,13 +100,11 @@ li {
 
 }
 
-.border-navbar{
+.border-navbar {
   border: 2px solid #0282F9 !important;
   position: absolute;
   top: 83px;
   width: 100%;
   opacity: 0;
 }
-
-
 </style>
