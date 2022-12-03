@@ -6,19 +6,19 @@
     <div class="jumbotron-footer">
 
       <div class="p-3 container">
-        <div class="row row-cols-3 text-white">
+        <div class="row text-white">
 
           <div class="col">
 
             <div class="row row-cols-1 g-2 row-cols-md-2 row-cols-lg-3">
 
-              <div class="col" v-for="list in navMap">
+              <div class="col" v-for="list, index in navMap">
 
                 <h5>{{ list.title }}</h5>
                 <ul class="nav flex-column">
 
                   <li class="nav-item">
-                    <a class="nav-link active px-0 text-secondary" href="#">{{ list.subtitle }}</a>
+                    <a class="nav-link active px-0 text-secondary" href="#"> {{ list.subtitle.join("\n") }} </a>
                   </li>
 
                 </ul>
@@ -29,7 +29,8 @@
 
           </div>
 
-          <div class="d-none d-lg-flex col-lg-8 bg-dc">
+          <div class="d-none d-lg-flex col-lg-5 bg-dc">
+            <h5 v-for="opt in ansPurchaseonly">{{    opt.join('\n')    }}</h5>
           </div>
 
         </div>
@@ -122,9 +123,9 @@ export default {
         },
       ],
     }
-  }
-
+  },
 }
+
 </script>
   
   
@@ -152,6 +153,9 @@ export default {
   background-position: right;
   background-position-y: center;
   background-position-y: center;
+}
 
+a {
+  white-space: pre-wrap;
 }
 </style>
