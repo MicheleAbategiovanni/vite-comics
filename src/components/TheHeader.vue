@@ -3,9 +3,9 @@
   <header>
 
     <nav class="navbar navbar-expand-lg bg-light py-3">
-      
+
       <div class="container">
-        
+
         <div>
           <a class="navbar-brand" href="#">
             <img src="/img/dc-logo.png" alt="logo dc comics">
@@ -21,8 +21,9 @@
 
           <ul class="navbar-nav">
 
-            <li class="nav-item" v-for="(navItem) in items">
+            <li class="nav-item position-relative" v-for="(navItem) in items">
               <a class="nav-link active fs-6" aria-current="page" href="#">{{ navItem.title }}</a>
+              <div class="border-navbar"></div>
             </li>
 
           </ul>
@@ -84,6 +85,29 @@ export default {
 
 
 <style lang="scss">
+li {
+
+
+  &:hover {
+    .border-navbar{
+
+      opacity: 1;
+    }
+
+    a:hover {
+      color: #0282F9 !important;
+    }
+  }
+
+}
+
+.border-navbar{
+  border: 2px solid #0282F9 !important;
+  position: absolute;
+  top: 83px;
+  width: 100%;
+  opacity: 0;
+}
 
 
 </style>
