@@ -9,7 +9,7 @@
             </div>
 
             <!-- Container Card Comics -->
-            <div class="container py-5 text-white position-relative">
+            <div class="container py-5 text-white position-relative ">
                 <div>
                     <button class="btn btn-primary rounded-0 fw-bold position-absolute top-20">CURRENT SERIES</button>
 
@@ -22,8 +22,12 @@
                             </a>
                         </div>
 
+                        
                     </div>
-
+                    <div class="text-center">
+                        <button class="btn btn-primary rounded-0 fw-bold px-5">LOAD MORE</button>
+                        
+                    </div>
                 </div>
             </div>
 
