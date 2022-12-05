@@ -10,24 +10,17 @@
 
             <!-- Container Card Comics -->
             <div class="container py-5 text-white position-relative ">
-                <div>
-                    <button class="btn btn-primary rounded-0 fw-bold position-absolute top-20">CURRENT SERIES</button>
+                <button class="btn btn-primary rounded-0 fw-bold position-absolute top-20">CURRENT SERIES</button>
 
-                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6">
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6">
 
-                        <div class="col" v-for="comic, i in listComics">
-                            <a href="#" class="text-decoration-none text-white ">
-                                <img :src=comic.thumb :alt=comic.series class="comic-card">
-                                <h6 class="py-3">{{ comic.series }}</h6>
-                            </a>
-                        </div>
+                    <ComicCard :comicList="listComics" />
 
-                        
-                    </div>
-                    <div class="text-center">
-                        <button class="btn btn-primary rounded-0 fw-bold px-5">LOAD MORE</button>
-                        
-                    </div>
+
+                </div>
+
+                <div class="text-center">
+                    <button class="btn rounded-0 fw-bold px-5 btn-primary">LOAD MORE</button>
                 </div>
             </div>
 
@@ -43,9 +36,10 @@
 <script>
 
 import ContainerIcon from './ContainerIcon.vue';
+import ComicCard from './ComicCard.vue';
 
 export default {
-    components: { ContainerIcon },
+    components: { ContainerIcon, ComicCard },
 
     data() {
         return {
@@ -130,8 +124,9 @@ export default {
 </script>
   
   
-  
 <style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
+
 .jumbotron {
     background-image: url(/img/jumbotron.jpg);
     background-repeat: no-repeat;
@@ -148,10 +143,4 @@ export default {
     top: -20px;
 }
 
-.comic-card {
-    aspect-ratio: 1/1;
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-}
 </style>
